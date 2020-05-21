@@ -5,8 +5,8 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="Appz">
+      <header className="App-headerz">
         <img src={easter_egg} className="App-logo" alt="logo" />
         <p>
           Congratulations, you have found the magic egg.
