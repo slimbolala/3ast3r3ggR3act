@@ -7,13 +7,16 @@
 <body>
   <div id="root"></div>
   <main>
-    <h1>GeoRun</h1>
+
+    <h1>GeoHop</h1>
+    <div id="geohop"></div>
     <script>
 
     var config = {
         type: Phaser.AUTO,
         width: 800,
         height: 600,
+        parent: "geohop",
         physics: {
             default: 'arcade',
             arcade: {
@@ -166,6 +169,16 @@
     }
 
   </script>
+
+  <hr>
+
+  <h1>GeoDrive</h1>
+
+  <div id = "geodrive"></div>
+  <script src = "phaser.min.js"></script>
+  <script src = "simplify.js"></script>
+  <script src = "game.js"></script>
+
   </main>
 </body>
 </html>
