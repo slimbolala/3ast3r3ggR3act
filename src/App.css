@@ -1,13 +1,21 @@
 body {
   background-color: black;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  font-family: 'VT323', monospace;
+  color: #7DBF3B;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  font-family: 'Share Tech Mono', monospace;
+  /* height: 100vh; */
+  /* font-family: 'VT323', monospace; */
+  text-align: center;
 }
 
+h1 {
+  font-size: 48px;
+  line-height: 96px;
+}
+
+/*
 .App {
   text-align: center;
 }
@@ -45,4 +53,4 @@ body {
   to {
     transform: rotate(360deg);
   }
-}
+} */
