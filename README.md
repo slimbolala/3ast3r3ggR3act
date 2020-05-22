@@ -6,3 +6,4 @@ cd 3ast3r3gg/
 npm install
 npm start
 ```
+(Make sure you've performed the other PREREQUISITE SPELLS — LINK TO SET UP.)

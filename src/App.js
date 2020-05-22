@@ -1,5 +1,4 @@
 import React from 'react';
-import easter_egg from './easter_egg.png';
 import './App.css';
 
 function App() {
