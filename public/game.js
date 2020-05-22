@@ -26,7 +26,7 @@ var gameOptions = {
 window.onload = function() {
     let gameConfig = {
         type: Phaser.AUTO,
-        backgroundColor: 0x75d5e3,
+        backgroundColor: 0x000000,
         scale: {
             mode: Phaser.Scale.FIT,
             autoCenter: Phaser.Scale.CENTER_BOTH,
@@ -38,7 +38,7 @@ window.onload = function() {
             default: "matter",
             matter: {
                 debug: true,
-                debugBodyColor: 0x00000
+                debugBodyColor: 0x57f454
             }
         },
         scene: playGame
@@ -153,7 +153,7 @@ class playGame extends Phaser.Scene{
         // draw the ground
         graphics.clear();
         graphics.moveTo(0, game.config.height * 2);
-        graphics.fillStyle(0x654b35);
+        graphics.fillStyle(0x000000);
         graphics.beginPath();
         simpleSlope.forEach(function(point){
             graphics.lineTo(point.x, point.y);
@@ -164,7 +164,7 @@ class playGame extends Phaser.Scene{
         graphics.fillPath();
 
         // draw the grass
-        graphics.lineStyle(16, 0x6b9b1e);
+        graphics.lineStyle(16, 0x57f454);
         graphics.beginPath();
         simpleSlope.forEach(function(point){
             graphics.lineTo(point.x, point.y);
