@@ -1,19 +1,30 @@
 body {
   background-color: black;
   color: #57f454;
+  display: flex;
+    align-items: center;
+    justify-content: center;
   font-family: 'Share Tech Mono', monospace;
-  text-align: center;
+}
+
+main {
+  width: 800px;
 }
 
 h1 {
   font-size: 60px;
-  line-height: 96px;
 }
 
-#geohop {
-  margin-bottom: 100px;
+p {
+  font-size: 20px;
+  line-height: 28px;
 }
 
-#geodrive canvas {
+a {
+  color: #00bbff;
+}
+
+#georover canvas {
   margin-left: 0 !important;
+  margin-top: 0 !important;
 }

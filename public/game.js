@@ -30,15 +30,15 @@ window.onload = function() {
         scale: {
             mode: Phaser.Scale.FIT,
             autoCenter: Phaser.Scale.CENTER_BOTH,
-            parent: "geodrive",
+            parent: "georover",
             width: 800,
-            height: 600
+            height: 500
         },
         physics: {
             default: "matter",
             matter: {
                 debug: true,
-                debugBodyColor: 0x000000
+                debugBodyColor: 0x00000
             }
         },
         scene: playGame
