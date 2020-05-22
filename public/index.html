@@ -28,6 +28,13 @@
         }
     };
 
+    var player;
+    var stars;
+    var platforms;
+    var cursors;
+    var score = 0;
+    var scoreText;
+
     var game = new Phaser.Game(config);
 
     function preload ()
@@ -45,20 +52,13 @@
     function create ()
     {
 
-        // Bacgkround
-
-        // this.add.image(400, 300, 'sky');
-        // this.add.image(400, 300, 'star');
-
-        // Platforms
+        this.add.image(400, 300, 'sky');
 
         platforms = this.physics.add.staticGroup();
         platforms.create(400, 568, 'ground').setScale(2).refreshBody();
         platforms.create(600, 400, 'ground');
         platforms.create(50, 250, 'ground');
         platforms.create(750, 220, 'ground');
-
-        // Player
 
         player = this.physics.add.sprite(100, 450, 'dude');
 
@@ -85,7 +85,6 @@
             repeat: -1
         });
 
-        // Stars
         stars = this.physics.add.group({
             key: 'star',
             repeat: 11,
@@ -96,12 +95,12 @@
             child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
         });
 
-        this.physics.add.overlap(player, stars, collectStar, null, this);
-
-        // Colliders
+        scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
 
         this.physics.add.collider(player, platforms);
         this.physics.add.collider(stars, platforms);
+
+        this.physics.add.overlap(player, stars, collectStar, null, this);
     }
 
     function update ()
@@ -136,6 +135,9 @@
     function collectStar (player, star)
     {
         star.disableBody(true, true);
+        
+        score += 10;
+        scoreText.setText('Score: ' + score);
     }
 
   </script>
